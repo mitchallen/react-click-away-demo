@@ -38,7 +38,9 @@ function App() {
 
     const handleMouseDown = e => {
 
-      let isOver = (rf) => rf.current && rf.current.contains(e.target);
+      // let isOver = (rf) => rf.current && rf.current.contains(e.target);
+      // requires node 14 or greater
+      let isOver = (rf) => rf.current?.contains(e.target);
 
       let checkOutside = function (flag, rp) {
         if (flag && !isOver(rp.button) && !isOver(rp.dialog)) {
