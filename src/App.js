@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
 
-    const handleMouseDoen = e => {
+    const handleMouseDown = e => {
 
       let isOver = (rf) => rf.current && rf.current.contains(e.target);
       let isOutside = (rf) => rf.current && !rf.current.contains(e.target);
@@ -56,11 +56,11 @@ function App() {
       checkOutside("C", showDialogC, refC);
     }
 
-    document.addEventListener("mousedown", handleMouseDoen);
+    document.addEventListener("mousedown", handleMouseDown);
 
     return () => {
       // Cleanup the event listener
-      document.removeEventListener("mousedown", handleMouseDoen);
+      document.removeEventListener("mousedown", handleMouseDown);
     }
 
   }, [
