@@ -115,17 +115,17 @@ function App() {
 
   return (
     <div className="App">
-      <div class="pair">
-        <button class="item" ref={refA.button} onClick={handleClickAlpha}>A</button>
-        <div id="childA" class="dialog" ref={refA.dialog} style={styleA}></div>
+      <div className="pair">
+        <button className="item" ref={refA.button} onClick={handleClickAlpha}>A</button>
+        <div id="childA" className="dialog" ref={refA.dialog} style={styleA}></div>
       </div>
-      <div class="pair">
-        <button class="item" ref={refB.button} onClick={handleClickBeta}>B</button>
-        <div id="childB" class="dialog" ref={refB.dialog} style={styleB}></div>
+      <div className="pair">
+        <button className="item" ref={refB.button} onClick={handleClickBeta}>B</button>
+        <div id="childB" className="dialog" ref={refB.dialog} style={styleB}></div>
       </div>
-      <div class="pair">
-        <button class="item" ref={refC.button} onClick={handleClickGamma}>C</button>
-        <div id="childC" class="dialog" ref={refC.dialog} style={styleC}></div>
+      <div className="pair">
+        <button className="item" ref={refC.button} onClick={handleClickGamma}>C</button>
+        <div id="childC" className="dialog" ref={refC.dialog} style={styleC}></div>
       </div>
     </div>
   );
