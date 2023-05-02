@@ -1,5 +1,7 @@
 react-click-away-demo
 ==
+React click away (click outside) demo.
+--
 
 ## See article:
 
