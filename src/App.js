@@ -41,7 +41,7 @@ function App() {
       let isOver = (rf) => rf.current && rf.current.contains(e.target);
       let isOutside = (rf) => rf.current && !rf.current.contains(e.target);
 
-      let checkOutside = function (label, flag, rp) {
+      let checkOutside = function (flag, rp) {
         let isOverButton = isOver(rp.button);
         let isOutsideDialog = isOutside(rp.dialog);
         if (flag && !isOverButton && isOutsideDialog) {
@@ -51,9 +51,9 @@ function App() {
 
       // important to reference flags below for useEffect
       // if a flag isn't referenced this won't work for that flag
-      checkOutside("A", showDialogA, refA);
-      checkOutside("B", showDialogB, refB);
-      checkOutside("C", showDialogC, refC);
+      checkOutside(showDialogA, refA);
+      checkOutside(showDialogB, refB);
+      checkOutside(showDialogC, refC);
     }
 
     document.addEventListener("mousedown", handleMouseDown);
