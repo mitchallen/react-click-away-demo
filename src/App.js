@@ -39,12 +39,9 @@ function App() {
     const handleMouseDown = e => {
 
       let isOver = (rf) => rf.current && rf.current.contains(e.target);
-      let isOutside = (rf) => rf.current && !rf.current.contains(e.target);
 
       let checkOutside = function (flag, rp) {
-        let isOverButton = isOver(rp.button);
-        let isOutsideDialog = isOutside(rp.dialog);
-        if (flag && !isOverButton && isOutsideDialog) {
+        if (flag && !isOver(rp.button) && !isOver(rp.dialog)) {
           clearDialogs();
         }
       }
